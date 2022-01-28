@@ -1,0 +1,16 @@
+<div class="container" style=" margin-top: 3%">
+    <table class="table  table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Renk</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let color of colors">
+        <tr  > 
+          <td>{{color.id}}</td>
+          <td>{{color.name}}</td>   
+          <td><button type="button" class="btn btn-danger" (click)="delete(color.id)">Sil</button></td>             
+      </tbody>
+    </table>
+  </div>

@@ -1,0 +1,15 @@
+<div class="container" style=" margin-top: 3%">
+    <table class="table  table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Segment</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let segment of segments">
+        <tr  > 
+          <td>{{segment.id}}</td>
+          <td>{{segment.segmentName}}</td>                
+      </tbody>
+    </table>
+  </div>

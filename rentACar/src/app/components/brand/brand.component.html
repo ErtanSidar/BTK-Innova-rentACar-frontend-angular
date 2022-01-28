@@ -1,0 +1,16 @@
+<div class="container" style=" margin-top: 3%">
+    <table class="table  table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Brand</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let brand of brands">
+        <tr  > 
+          <td>{{brand.id}}</td>
+          <td>{{brand.name}}</td> 
+          <td><button type="button" class="btn btn-danger" (click)="delete(brand.id)">Sil</button></td>              
+      </tbody>
+    </table>
+  </div>

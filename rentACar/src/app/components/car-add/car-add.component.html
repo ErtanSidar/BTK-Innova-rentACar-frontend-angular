@@ -1,0 +1,91 @@
+<div class="padding container d-flex justify-content-center">
+    <div class="col-md-10 col-md-offset-1">
+            <h2 class="text-center">ADDED BRAND NOW</h2>
+            <div class="card-body">
+                <form [formGroup]="carAddForm">
+                    <div class="mb-3" >
+                        <label for="dailyPrice">Daily Price</label>
+                        <div class="form-group">
+                            <input type="text" 
+                            id="dailyPrice" 
+                            formControlName="dailyPrice" class="form-control" 
+                            placeholder="Daily Price"/>
+                        </div>
+                    </div>
+                    <div class="mb-3" >
+                        <label for="modelYear">Model Year</label>
+                        <div class="form-group">
+                            <input type="text" 
+                            id="modelYear" 
+                            formControlName="modelYear" class="form-control" 
+                            placeholder="Model Year"/>
+                        </div>
+                    </div>
+                    <div class="mb-3" >
+                        <label for="description">Description</label>
+                        <div class="form-group">
+                            <input type="text" 
+                            id="description" 
+                            formControlName="description" class="form-control" 
+                            placeholder="Description"/>
+                        </div>
+                    </div>
+                    <div class="mb-3" >
+                        <label for="findexScore">Findex Score</label>
+                        <div class="form-group">
+                            <input type="text" 
+                            id="findexScore" 
+                            formControlName="findexScore" class="form-control" 
+                            placeholder="Findex Score"/>
+                        </div>
+                    </div>
+                    <div class="mb-3" >
+                        <label for="minAge">Min Age</label>
+                        <div class="form-group">
+                            <input type="text" 
+                            id="minAge" 
+                            formControlName="minAge" class="form-control" 
+                            placeholder="Min Age"/>
+                        </div>
+                    </div>
+                    <div class="mb-3" >
+                        <label for="kilometer">Kilometer</label>
+                        <div class="form-group">
+                            <input type="text" 
+                            id="kilometer" 
+                            formControlName="kilometer" class="form-control" 
+                            placeholder="Kilometer"/>
+                        </div>
+                    </div>
+                    <div class="mb-3" >
+                        <label for="segmentId">Segment Id</label>
+                        <select formControlName="segmentId" class="form-select" aria-label="Default select example">
+                            
+                            <option *ngFor="let segment of segments" value={{segment.id}}>{{segment.segmentName}}</option>
+                            
+                          </select>
+                    </div>
+                    <div class="mb-3" >
+                        <label for="brandId">Brand Id</label>
+                        <select formControlName="brandId" class="form-select" aria-label="Default select example">
+                            
+                            <option *ngFor="let brand of brands" value={{brand.id}}>{{brand.name}}</option>
+                            
+                          </select>
+                    </div>
+                    <div class="mb-3" >
+                        <label for="colorId">Color Id</label>
+                        <select formControlName="colorId" class="form-select" aria-label="Default select example">
+                            
+                            <option *ngFor="let color of colors" value={{color.id}}>{{color.name}}</option>
+                            
+                          </select>
+                    </div>
+                    
+                </form>
+            </div>
+            <div class="card-footer">
+                <button class="btn btn-fill btn-primary" (click)="add()">Add</button>
+            </div>
+    </div>
+</div>

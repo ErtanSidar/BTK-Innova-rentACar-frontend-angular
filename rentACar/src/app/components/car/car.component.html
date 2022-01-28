@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-4" *ngFor="let car of cars">
+      <figure class="card card-product-grid card-lg">
+        <a href="#" class="img-wrap" data-abc="true"
+          ><img
+            src="https://img.internethaber.com/rcman/Cw480h270q95gc/storage/files/images/2022/01/06/qqq-5J18_cover.jpg"
+        /></a>
+        <figcaption class="info-wrap">
+          <div class="row">
+            <div class="col-md-8">
+              <a href="#" class="title" data-abc="true"
+                >{{car.brandName}}</a
+              >
+              
+            </div>
+            <div class="card-image-overlay m-auto">
+              <small class="text-success"></small>
+              <span class="card-detail-badge">{{car.modelYear}}</span>
+              <span class="card-detail-badge">{{car.findexScore}}</span>
+              <span class="card-detail-badge">260 Kms</span>
+          </div>
+            <div class="col-md-4">
+              <div class="rating text-right">
+                <i class="fa fa-star"></i> <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+            </div>
+          </div>
+        </figcaption>
+        <div class="bottom-wrap">
+          <a [routerLink]="['/car', car.id]" class="btn btn-primary float-right" data-abc="true">
+            View  Details
+          </a>
+          <div class="price-wrap">
+            <span class="price h5">${{car.dailyPrice}}</span> <br />
+            <small class="text-success"></small>
+          </div>
+        </div>
+      </figure>
+    </div>
+  </div>
+</div>

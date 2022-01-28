@@ -1,0 +1,50 @@
+<div class="padding container d-flex justify-content-center">
+    <div class="col-md-10 col-md-offset-1">
+            <h2 class="text-center">ADDED PROMOTİON NOW</h2>
+            <hr>
+            <div class="card-body">
+                <form [formGroup]="promotionAddForm">
+                    <div class="mb-3" >
+                        <label for="promotionCode">Promotion Code</label>
+                        <div class="form-group">
+                            <input type="text" 
+                            id="promotionCode" 
+                            formControlName="promotionCode" class="form-control" 
+                            placeholder="Promotion Code"/>
+                        </div>
+                    </div>
+                    <div class="mb-3" >
+                        <label for="discountAmount">Discount Amount</label>
+                        <div class="form-group">
+                            <input type="text" 
+                            id="discountAmount" 
+                            formControlName="discountAmount" class="form-control" 
+                            placeholder="Discount Amount"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Started Date</label>
+                        <br />
+                        <p-calendar
+                          [showIcon]="true"
+                          formControlName="startedDate"
+                          dateFormat="yy.dd.mm"
+                        ></p-calendar>
+                      </div>
+                      <div class="form-group">
+                        <label for="name">Ended Date</label>
+                        <br />
+                        <p-calendar
+                          [showIcon]="true"
+                          formControlName="endedDate"
+                          dateFormat="yy.dd.mm"
+                        ></p-calendar>
+                      </div>
+                </form>
+            </div>
+            <div class="card-footer">
+                <button class="btn btn-fill btn-primary" (click)="add()">Add</button>
+            </div>
+            <app-promotion></app-promotion>
+    </div>
+</div>

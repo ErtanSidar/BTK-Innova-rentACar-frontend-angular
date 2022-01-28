@@ -1,0 +1,22 @@
+<div class="container" style=" margin-top: 3%">
+    <table class="table  table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Promotion Code</th>
+          <th scope="col">Discount Amount</th>
+          <th scope="col">Started Date</th>
+          <th scope="col">Ended Date</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let promotion of promotions">
+        <tr  > 
+          <td>{{promotion.id}}</td>
+          <td>{{promotion.promotionCode}}</td>
+          <td>{{promotion.discountAmount}}</td>
+          <td>{{promotion.startedDate}}</td> 
+          <td>{{promotion.endedDate}}</td>
+                
+      </tbody>
+    </table>
+  </div>
